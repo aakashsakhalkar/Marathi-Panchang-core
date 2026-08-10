@@ -1,0 +1,6 @@
+# JitPack configuration for Android / Java builds
+jdk:
+  - openjdk17
+before_install:
+  - npm install
+  - npm run build

@@ -1,0 +1,252 @@
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+vendor/
+packages/
+
+# ==========================================
+# Build Output
+# ==========================================
+dist/
+build/
+out/
+target/
+bin/
+obj/
+release/
+debug/
+coverage/
+.nyc_output/
+.next/
+.nuxt/
+.svelte-kit/
+.storybook-out/
+.angular/
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache/
+.netlify
+# ==========================================
+# Android
+# ==========================================
+.gradle/
+local.properties
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.keystore
+*.jks
+.gradle/
+.gradle_home/
+build/
+**/build/
+local.properties
+.idea/
+
+# ==========================================
+# Java / Kotlin / Spring Boot
+# ==========================================
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+.mvn/wrapper/maven-wrapper.jar
+
+# ==========================================
+# Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+ENV/
+.python-version
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ==========================================
+# Flutter / Dart
+# ==========================================
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub/
+build/
+ios/Flutter/Flutter.framework
+ios/Flutter/App.framework
+
+# ==========================================
+# React Native
+# ==========================================
+.expo/
+.expo-shared/
+android/app/build/
+ios/build/
+
+# ==========================================
+# .NET
+# ==========================================
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+TestResults/
+
+# ==========================================
+# C / C++ / CMake
+# ==========================================
+CMakeFiles/
+CMakeCache.txt
+cmake-build-*/
+Makefile
+compile_commands.json
+
+# ==========================================
+# Rust
+# ==========================================
+target/
+Cargo.lock
+
+# Uncomment if this is an application
+#! Cargo.lock
+
+# ==========================================
+# Go
+# ==========================================
+*.test
+vendor/
+
+# ==========================================
+# Swift / Xcode
+# ==========================================
+DerivedData/
+*.xcworkspace/
+*.xcuserstate
+*.xcuserdata/
+
+# ==========================================
+# Terraform
+# ==========================================
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# ==========================================
+# Serverless
+# ==========================================
+.serverless/
+.aws-sam/
+
+# ==========================================
+# Environment Variables & Secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.secret
+
+# ==========================================
+# Logs
+# ==========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ==========================================
+# Database
+# ==========================================
+*.db
+*.sqlite
+*.sqlite3
+
+# ==========================================
+# Archives
+# ==========================================
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z
+
+# ==========================================
+# IDEs
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.orig
+
+# ==========================================
+# Operating System
+# ==========================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+# ==========================================
+# Temporary Files
+# ==========================================
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+
+# ==========================================
+# Testing
+# ==========================================
+coverage/
+test-results/
+playwright-report/
+
+# ==========================================
+# Generated Files
+# ==========================================
+*.generated.*
+generated/
+
+# ==========================================
+# Package Managers
+# ==========================================
+.pnpm-store/
+.npm/
+.yarn/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# ==========================================
+# Misc
+# ==========================================
+.cache/
+.history/
+.sass-cache/
+.fusebox/
