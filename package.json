@@ -1,7 +1,14 @@
 {
-  "name": "marathi-panchang-core",
+  "name": "@aakashsakhalkar/marathi-panchang-core",
   "version": "1.0.0",
   "description": "Ultra-accurate, zero-dependency Marathi Panchang and Hindu Calendar engine for Web, Node.js, and Android.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aakashsakhalkar/Marathi-Panchang-core.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
