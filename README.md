@@ -46,15 +46,21 @@
 
 ### 1. Web / React / Next.js / Vue / Node.js
 
-Install directly from GitHub into any Node.js or JavaScript project:
-
+#### Option A: Via GitHub Packages Registry (Recommended)
+First, tell NPM to map `@aakashsakhalkar` to GitHub Packages:
 ```bash
-npm install github:aakashsakhalkar/Marathi-Panchang-core
+npm config set @aakashsakhalkar:registry=https://npm.pkg.github.com
+```
+Then install the package:
+```bash
+npm install @aakashsakhalkar/marathi-panchang-core@1.0.2
 ```
 
-Or via GitHub Packages registry:
+*(Or add `@aakashsakhalkar:registry=https://npm.pkg.github.com` into your project's `.npmrc` file).*
+
+#### Option B: Direct Git Install (Without registry config)
 ```bash
-npm install @aakashsakhalkar/marathi-panchang-core
+npm install github:aakashsakhalkar/Marathi-Panchang-core#v1.0.2
 ```
 
 ---
@@ -70,8 +76,8 @@ Include this single script tag in any HTML file to load the library directly in 
   <meta charset="UTF-8">
   <title>मराठी पंचांग टेस्ट</title>
 
-  <!-- 🌐 Live CDN Import -->
-  <script src="https://cdn.jsdelivr.net/gh/aakashsakhalkar/Marathi-Panchang-core@main/dist/marathi-panchang.min.js"></script>
+  <!-- 🌐 Live CDN Import (v1.0.2) -->
+  <script src="https://cdn.jsdelivr.net/gh/aakashsakhalkar/Marathi-Panchang-core@v1.0.2/dist/marathi-panchang.min.js"></script>
 </head>
 <body>
 
@@ -115,7 +121,7 @@ dependencyResolutionManagement {
 #### Step 2: Add dependency in `build.gradle` (app module)
 ```groovy
 dependencies {
-    implementation 'com.github.aakashsakhalkar:Marathi-Panchang-core:main'
+    implementation 'com.github.aakashsakhalkar:Marathi-Panchang-core:v1.0.2'
 }
 ```
 
