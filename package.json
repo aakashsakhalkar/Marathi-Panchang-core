@@ -20,6 +20,7 @@
   ],
   "scripts": {
     "build": "tsc && npx esbuild src/index.ts --bundle --outfile=dist/marathi-panchang.min.js --global-name=MarathiPanchang --format=iife",
+    "prepare": "npm run build",
     "demo": "npx serve demo"
   },
   "keywords": [
