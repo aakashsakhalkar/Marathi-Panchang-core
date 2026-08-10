@@ -18,10 +18,16 @@ Calculates complete Marathi Panchang (Tithi, Nakshatra, Yoga, Karana, Amanta Mar
 
 ## 🚀 Installation & Usage
 
-### 1. Web & JavaScript / TypeScript / Node.js (NPM)
+### 1. Web & JavaScript / TypeScript / Node.js
 
+#### Option A: Direct Install from GitHub (No NPM account needed!)
 ```bash
-npm install marathi-panchang-core
+npm install github:aakashsakhalkar/Marathi-Panchang-core
+```
+
+#### Option B: If published to NPM Registry
+```bash
+npm install @aakashsakhalkar/marathi-panchang-core
 ```
 
 #### TypeScript / ES6 Usage:
@@ -37,9 +43,9 @@ console.log(panchang.astronomy.sunrise);            // 06:14:41
 console.log(panchang.muhurta.rahuKaal);             // { start: '07:50', end: '09:27' }
 ```
 
-#### Pure HTML `<script>` Usage (CDN / GitHub Releases):
+#### Pure HTML `<script>` Usage (CDN directly from your GitHub):
 ```html
-<script src="https://cdn.jsdelivr.net/gh/YourUsername/marathi-panchang-core@1.0.0/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/aakashsakhalkar/Marathi-Panchang-core@main/dist/index.js"></script>
 <script>
   const panchang = MarathiPanchang.getMarathiPanchang('2026-03-19');
   console.log(panchang.tithi.nameMarathi); // प्रथमा (गुढीपाडवा)
@@ -50,7 +56,7 @@ console.log(panchang.muhurta.rahuKaal);             // { start: '07:50', end: '0
 
 ### 2. Android (Kotlin / Java) via JitPack
 
-Android developers can fetch this repository directly from GitHub using **JitPack.io**!
+Android developers can fetch your repository directly from GitHub using **JitPack.io**!
 
 #### Step 1: Add JitPack repository in `settings.gradle`
 ```groovy
@@ -66,7 +72,7 @@ dependencyResolutionManagement {
 #### Step 2: Add dependency in `build.gradle` (app module)
 ```groovy
 dependencies {
-    implementation 'com.github.YourUsername:marathi-panchang-core:v1.0.0'
+    implementation 'com.github.aakashsakhalkar:Marathi-Panchang-core:main'
 }
 ```
 
