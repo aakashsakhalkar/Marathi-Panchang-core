@@ -1,0 +1,3 @@
+test:
+
+node -e "const { getMarathiPanchang } = require('@aakashsakhalkar/marathi-panchang-core'); console.log(getMarathiPanchang('2026-08-10'));"
