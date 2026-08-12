@@ -1,3 +1,4 @@
-test:
+Test:
+npm install marathi-panchang-core 
 
-node -e "const { getMarathiPanchang } = require('@aakashsakhalkar/marathi-panchang-core'); console.log(getMarathiPanchang('2026-08-10'));"
+node -e "const { getMarathiPanchang } = require('marathi-panchang-core'); console.log(getMarathiPanchang('2026-08-10'));"

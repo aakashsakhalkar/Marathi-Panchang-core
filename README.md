@@ -46,21 +46,10 @@
 
 ### 1. Web / React / Next.js / Vue / Node.js
 
-#### Option A: Via GitHub Packages Registry (Recommended)
-First, tell NPM to map `@aakashsakhalkar` to GitHub Packages:
-```bash
-npm config set @aakashsakhalkar:registry=https://npm.pkg.github.com
-```
-Then install the package:
-```bash
-npm install @aakashsakhalkar/marathi-panchang-core@1.0.2
-```
+Install directly via NPM:
 
-*(Or add `@aakashsakhalkar:registry=https://npm.pkg.github.com` into your project's `.npmrc` file).*
-
-#### Option B: Direct Git Install (Without registry config)
 ```bash
-npm install github:aakashsakhalkar/Marathi-Panchang-core#v1.0.2
+npm install marathi-panchang-core
 ```
 
 ---
@@ -158,7 +147,7 @@ dependencies:
 ### Basic Usage (Today's Date in Pune / Mumbai):
 
 ```javascript
-const { getMarathiPanchang } = require('@aakashsakhalkar/marathi-panchang-core');
+const { getMarathiPanchang } = require('marathi-panchang-core');
 
 // Get today's Panchang
 const panchang = getMarathiPanchang();
@@ -176,7 +165,7 @@ console.log(panchang.nakshatra.nameMarathi); // 'आर्द्र'
 Panchang elements (especially Sunrise, Sunset, and Tithi transition times) depend on geographical coordinates. You can pass any custom latitude & longitude:
 
 ```javascript
-const { getMarathiPanchang } = require('@aakashsakhalkar/marathi-panchang-core');
+const { getMarathiPanchang } = require('marathi-panchang-core');
 
 // Example: Get Panchang for Nagpur on Gudi Padwa 2026
 const nagpurLocation = {
