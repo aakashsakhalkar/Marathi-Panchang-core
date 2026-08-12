@@ -1,4 +1,19 @@
-Test:
-npm install marathi-panchang-core 
+# marathi-panchang-core - Notes & Quick Commands
 
+NPM Package: https://www.npmjs.com/package/marathi-panchang-core
+GitHub Repo: https://github.com/aakashsakhalkar/Marathi-Panchang-core
+
+## Installation
+npm install marathi-panchang-core
+
+## Test Commands
+
+1. Quick Node.js Test (CommonJS):
 node -e "const { getMarathiPanchang } = require('marathi-panchang-core'); console.log(getMarathiPanchang('2026-08-10'));"
+
+2. Quick Node.js Test (ES Module):
+node --input-type=module -e "import { getMarathiPanchang } from 'marathi-panchang-core'; console.log(getMarathiPanchang().date);"
+
+## Local Build & Maintenance
+- Build project: npm run build
+- Publish to NPM: npm publish --access public
