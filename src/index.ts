@@ -2,6 +2,7 @@ import { CompleteMarathiPanchang, GeoLocation } from './types';
 import { calculateSunTimes } from './astronomy/sun';
 import { calculateMoonTimes } from './astronomy/moon';
 import { getJulianDay, getLahiriAyanamsha } from './astronomy/ayanamsha';
+import { getPlanetaryPositions } from './astronomy/ephemeris';
 import { calculateTithiInfo } from './panchang/tithi';
 import { calculateNakshatraInfo } from './panchang/nakshatra';
 import { calculateYogaInfo } from './panchang/yoga';
@@ -90,6 +91,23 @@ export function getMarathiPanchang(
 
   const jdNoon = getJulianDay(year, month, day, 12 - location.timezoneOffsetHours);
   const ayanamshaDeg = getLahiriAyanamsha(jdNoon);
+  const posPlanets = getPlanetaryPositions(jdNoon);
+  const RASHIS = [
+    { marathi: 'मेष', english: 'Aries' },
+    { marathi: 'वृषभ', english: 'Taurus' },
+    { marathi: 'मिथुन', english: 'Gemini' },
+    { marathi: 'कर्क', english: 'Cancer' },
+    { marathi: 'सिंह', english: 'Leo' },
+    { marathi: 'कन्या', english: 'Virgo' },
+    { marathi: 'तुला', english: 'Libra' },
+    { marathi: 'वृश्चिक', english: 'Scorpio' },
+    { marathi: 'धनु', english: 'Sagittarius' },
+    { marathi: 'मकर', english: 'Capricorn' },
+    { marathi: 'कुंभ', english: 'Aquarius' },
+    { marathi: 'मीन', english: 'Pisces' },
+  ];
+  const sunRashiIdx = Math.floor(posPlanets.sunNirayanaDeg / 30.0) % 12;
+  const sunRashiObj = RASHIS[sunRashiIdx];
 
   const dateFormatted = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
 
@@ -110,8 +128,8 @@ export function getMarathiPanchang(
       dayLength: sunTimes.dayLengthStr,
       moonrise: moonTimes.moonriseStr,
       moonset: moonTimes.moonsetStr,
-      sunRashiMarathi: 'सिंह', // Solar rashi
-      sunRashiEnglish: 'Leo',
+      sunRashiMarathi: sunRashiObj.marathi,
+      sunRashiEnglish: sunRashiObj.english,
       moonRashiMarathi: nakshatra.rashiMarathi,
       moonRashiEnglish: nakshatra.rashiEnglish,
       lahiriAyanamshaDegrees: parseFloat(ayanamshaDeg.toFixed(4)),

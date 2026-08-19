@@ -19,6 +19,7 @@ exports.getMarathiPanchang = getMarathiPanchang;
 const sun_1 = require("./astronomy/sun");
 const moon_1 = require("./astronomy/moon");
 const ayanamsha_1 = require("./astronomy/ayanamsha");
+const ephemeris_1 = require("./astronomy/ephemeris");
 const tithi_1 = require("./panchang/tithi");
 const nakshatra_1 = require("./panchang/nakshatra");
 const yoga_1 = require("./panchang/yoga");
@@ -67,6 +68,23 @@ function getMarathiPanchang(date = new Date(), location = exports.DEFAULT_LOCATI
     const festivals = (0, festivals_1.getFestivalsForDay)(marathiMonth, tithi, month, day, moonTimes.moonriseStr);
     const jdNoon = (0, ayanamsha_1.getJulianDay)(year, month, day, 12 - location.timezoneOffsetHours);
     const ayanamshaDeg = (0, ayanamsha_1.getLahiriAyanamsha)(jdNoon);
+    const posPlanets = (0, ephemeris_1.getPlanetaryPositions)(jdNoon);
+    const RASHIS = [
+        { marathi: 'मेष', english: 'Aries' },
+        { marathi: 'वृषभ', english: 'Taurus' },
+        { marathi: 'मिथुन', english: 'Gemini' },
+        { marathi: 'कर्क', english: 'Cancer' },
+        { marathi: 'सिंह', english: 'Leo' },
+        { marathi: 'कन्या', english: 'Virgo' },
+        { marathi: 'तुला', english: 'Libra' },
+        { marathi: 'वृश्चिक', english: 'Scorpio' },
+        { marathi: 'धनु', english: 'Sagittarius' },
+        { marathi: 'मकर', english: 'Capricorn' },
+        { marathi: 'कुंभ', english: 'Aquarius' },
+        { marathi: 'मीन', english: 'Pisces' },
+    ];
+    const sunRashiIdx = Math.floor(posPlanets.sunNirayanaDeg / 30.0) % 12;
+    const sunRashiObj = RASHIS[sunRashiIdx];
     const dateFormatted = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
     return {
         date: dateFormatted,
@@ -85,8 +103,8 @@ function getMarathiPanchang(date = new Date(), location = exports.DEFAULT_LOCATI
             dayLength: sunTimes.dayLengthStr,
             moonrise: moonTimes.moonriseStr,
             moonset: moonTimes.moonsetStr,
-            sunRashiMarathi: 'सिंह', // Solar rashi
-            sunRashiEnglish: 'Leo',
+            sunRashiMarathi: sunRashiObj.marathi,
+            sunRashiEnglish: sunRashiObj.english,
             moonRashiMarathi: nakshatra.rashiMarathi,
             moonRashiEnglish: nakshatra.rashiEnglish,
             lahiriAyanamshaDegrees: parseFloat(ayanamshaDeg.toFixed(4)),

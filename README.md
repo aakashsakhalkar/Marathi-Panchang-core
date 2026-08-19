@@ -299,6 +299,29 @@ The engine automatically detects and lists all major Maharashtrian festivals and
 
 ---
 
+## 📝 Changelog & Bug Fixes
+
+### 🌟 v1.0.3 (August 19, 2026)
+* **🐛 [CRITICAL FIX] Amanta Lunar Month Alignment (अमांत चांद्र मास अचूकता):**
+  * **Issue Identified:** In earlier versions (`v1.0.2` and below), the lunar month was determined by checking the Sun's Nirayana Rashi on the *current day* (`sunNirayanaNoon`). When the Sun entered Simha (Leo) on August 16/17 during Simha Sankranti, the engine mistakenly flipped the lunar month to **Bhadrapada**, prematurely triggering Ganesh Chaturthi and Rishi Panchami in August instead of September.
+  * **Astronomical Correction:** Implemented `findPreviousNewMoonJD(jd)` and `findNextNewMoonJD(jd)`. Under authentic Amanta Siddhanta (Drik Panchang / Kalnirnay standard), the lunar month is strictly governed by the Sun's Nirayana sign at the exact moment of the **preceding New Moon (अमावास्या conjunction)**.
+  * **Result:** August 13 to September 11, 2026 is properly recognized as **निज श्रावण (Shravana)**, and **भाद्रपद (Bhadrapada)** begins only on September 12, 2026. Ganesh Chaturthi correctly triggers on **September 14, 2026** and Rishi Panchami on **September 15, 2026**.
+* **✨ [FEATURE] Additional Traditional Maharashtrian Festivals:**
+  * Added **ज्येष्ठा गौरी आवाहन व पूजन** (Gauri Avahan & Pujan - Bhadrapada Shukla 7/8).
+  * Added **पिठोरी अमावास्या (बैल पोळा)** (Shravana Krishna 30 / Amavasya).
+* **⚡ [IMPROVEMENT] Solar Longitude Precision:**
+  * Enhanced `rashiIndex` extraction directly from continuous Nirayana solar longitude degrees.
+
+### 🌟 v1.0.2 (August 10, 2026)
+* Added standalone browser IIFE distribution bundle (`dist/marathi-panchang.min.js`).
+* Added Android Kotlin / Java bridge integration (`MarathiPanchangBridge.kt`).
+* Added 60-year Jovian Samvatsara names (Shaka Samvat 1948 - Parabhava).
+
+### 🌟 v1.0.0 (August 1, 2026)
+* Initial release of 5-limbed Vedic astronomical calculation engine with zero dependencies.
+
+---
+
 ## 🛠 Building & Testing Locally
 
 ```bash

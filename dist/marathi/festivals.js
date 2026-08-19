@@ -106,6 +106,16 @@ function getFestivalsForDay(month, tithi, gregorianMonth, gregorianDay, moonrise
                 descriptionEnglish: 'Lord Krishna Jayanti and lively Dahi Handi celebrations.',
             });
         }
+        if (isKrishna && tIndex === 30) { // 30 = Shravan Amavasya
+            festivals.push({
+                id: 'pithori-amavasya-pola',
+                nameMarathi: 'पिठोरी अमावास्या (बैल पोळा)',
+                nameEnglish: 'Pithori Amavasya (Bail Pola)',
+                category: 'Major Festival',
+                descriptionMarathi: 'श्रावण अमावास्या, मातृपूजन व बैलांचा कृतज्ञता सण.',
+                descriptionEnglish: 'Shravana Amavasya and traditional agricultural cattle appreciation festival.',
+            });
+        }
     }
     // 5. Bhadrapada Month Festivals
     if (mName === 'Bhadrapada') {
@@ -127,6 +137,16 @@ function getFestivalsForDay(month, tithi, gregorianMonth, gregorianDay, moonrise
                 category: 'Vrat',
                 descriptionMarathi: 'सप्तर्षींचे पूजन व व्रत.',
                 descriptionEnglish: 'Honoring the Saptarshis.',
+            });
+        }
+        if (isShukla && (tIndex === 7 || tIndex === 8)) {
+            festivals.push({
+                id: 'gauri-avahan',
+                nameMarathi: 'ज्येष्ठा गौरी आवाहन व पूजन',
+                nameEnglish: 'Gauri Avahan & Pujan',
+                category: 'Major Festival',
+                descriptionMarathi: 'महालक्ष्मी स्वरूप ज्येष्ठा व कनिष्ठा गौरींचे आगमन व मंगल पूजन.',
+                descriptionEnglish: 'Arrival and sacred worship of Jyeshtha and Kanishtha Gauri.',
             });
         }
         if (isShukla && tIndex === 14) {

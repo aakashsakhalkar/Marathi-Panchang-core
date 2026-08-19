@@ -1,6 +1,6 @@
 {
   "name": "marathi-panchang-core",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ultra-accurate, zero-dependency Marathi Panchang and Hindu Calendar engine for Web, Node.js, and Android.",
   "repository": {
     "type": "git",
@@ -36,12 +36,9 @@
     "kalnirnay",
     "drik-panchang"
   ],
-  "author": "Antigravity Team",
+  "author": "Aakash Sakhalkar",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.3.3"
-  },
-  "dependencies": {
-    "marathi-panchang-core": "^1.0.2"
+    "typescript": "^5.9.3"
   }
 }
