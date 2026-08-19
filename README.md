@@ -301,7 +301,7 @@ The engine automatically detects and lists all major Maharashtrian festivals and
 
 ## 📝 Changelog & Bug Fixes
 
-### 🌟 v1.0.3 (August 19, 2026)
+### 🌟 v1.0.4 (August 19, 2026)
 * **🐛 [CRITICAL FIX] Amanta Lunar Month Alignment (अमांत चांद्र मास अचूकता):**
   * **Issue Identified:** In earlier versions (`v1.0.2` and below), the lunar month was determined by checking the Sun's Nirayana Rashi on the *current day* (`sunNirayanaNoon`). When the Sun entered Simha (Leo) on August 16/17 during Simha Sankranti, the engine mistakenly flipped the lunar month to **Bhadrapada**, prematurely triggering Ganesh Chaturthi and Rishi Panchami in August instead of September.
   * **Astronomical Correction:** Implemented `findPreviousNewMoonJD(jd)` and `findNextNewMoonJD(jd)`. Under authentic Amanta Siddhanta (Drik Panchang / Kalnirnay standard), the lunar month is strictly governed by the Sun's Nirayana sign at the exact moment of the **preceding New Moon (अमावास्या conjunction)**.
